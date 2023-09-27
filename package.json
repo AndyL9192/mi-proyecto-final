@@ -1,0 +1,28 @@
+{
+  "name": "mi-prpyecto-final",
+  "version": "1.0.0",
+  "description": "Foro de dinosaurios",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon app.js",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AndyL9192/mi-proyecto-final.git"
+  },
+  "author": "Anibal Andres Laz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AndyL9192/mi-proyecto-final/issues"
+  },
+  "homepage": "https://github.com/AndyL9192/mi-proyecto-final#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
