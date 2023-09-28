@@ -8,15 +8,17 @@ router.get('/home', (req, res) => {
     res.render('home')
   })
   
-router.post('/user', (req, res) => {
+
+router.post('/nueva-publicacion', (req, res) => {
   // Recibir datos por body
-    const { name, lastname, id } = req.body
+    const { titulo, detalle } = req.body
+
+    //se guardan los datos en una base de datos
+    console.log(titulo, detalle)
+
+    return res.send({ msg: "Publicacion guardada con éxito"})
   
-    res.send({
-      name,
-      lastname,
-      id,
-    })
+    
   })
   
   module.exports = router;
