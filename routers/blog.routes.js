@@ -1,24 +1,15 @@
 // Se implementa el enrutador de Express
 
 const { Router } = require('express');
+const { crearPublicacion } = require('../controllers/blog.controllers');
 const router = Router();
 
 
-router.get('/home', (req, res) => {
+router.get('/', (req, res) => {
     res.render('home')
   })
   
 
-router.post('/nueva-publicacion', (req, res) => {
-  // Recibir datos por body
-    const { titulo, detalle } = req.body
-
-    //se guardan los datos en una base de datos
-    console.log(titulo, detalle)
-
-    return res.send({ msg: "Publicacion guardada con éxito"})
-  
-    
-  })
+router.post('/nueva-publicacion',crearPublicacion )
   
   module.exports = router;

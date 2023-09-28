@@ -33,7 +33,6 @@ app.set('view engine', 'ejs')
 
 //Rutas
 app.use(require('./routers/blog.routes'))
-app.use(require('./routers/user.routes'))
 
 app.listen(port, () => console.log(`Servidor en http://localhost:${port}`))
 
