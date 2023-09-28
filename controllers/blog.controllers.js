@@ -31,7 +31,16 @@ ctrl.actualizarPublicacion = async (req, res) => {
     }
 
 ctrl.eliminarPublicacion = async (req, res) => {
-    
+  const { id } = req.params;
+  await Publicaciones.destroy({
+    where: {
+      id
+    }
+  });
+
+  res.json({
+    msg: "Publicacion eliminada con éxito"
+  })
     }
 
 

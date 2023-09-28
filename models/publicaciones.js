@@ -1,5 +1,5 @@
 
-const { DataTypes, Sequelize } = require('../models/database.js');
+const { DataTypes, Sequelize } = require('../database.js');
 
 const PublicacionSchema = sequelize.define('Publicaciones', {
     id: {
@@ -22,12 +22,11 @@ const PublicacionSchema = sequelize.define('Publicaciones', {
     url_imagen: {
         type: DataTypes.STRING,
         allowNull: false,
-    }
+    }},{
+        tableName: 'publicaciones',
+        timestamps: false
+      });
 
-    tableName: 'publicaciones',
-    timestamps: false
-
-    
-});
+   
 
 module.exports = PublicacionSchema;

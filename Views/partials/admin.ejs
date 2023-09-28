@@ -1,0 +1,33 @@
+<%-include('partials/header')  %>
+<%- include('partials/navbar') %>
+
+<div class="container mt-5">
+    <div class="row">
+      <div class="col">
+        <form action="#" id="form-guardar">
+          <div class="mb-3">
+            <input type="text" id="titulo-post" class="form-control" placeholder="titulo del post">
+          </div>
+
+          <div>
+            <div class="form-floating">
+              <textarea id="detalle-post" class="form-control" placeholder="comente" id="floatingTextarea2" style="height: 100px"></textarea>
+              <label for="floatingTextarea2">descripcion</label>
+            </div>
+          </div>
+          <div class="mb-3">
+            <input type="text" id="url-img" class="form-control" placeholder="url imagen">
+          </div>
+
+          <button type="submit" id="btn-guardar" class="btn btn-primary">
+            Guardar
+          </button>
+          
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="/js/admin.js"> </script>
+
+<%- include('partials/footer') %
